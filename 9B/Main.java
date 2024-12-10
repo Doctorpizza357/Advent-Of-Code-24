@@ -42,21 +42,6 @@ public class Main {
                             }
                             foundSpace = true;
 
-                            // Merge space blocks
-                            /*
-                            int end = disk.size() - 1;
-                            for (int l = 0; l < end; l++) {
-                                if (disk.get(l).getId() == -1 && disk.get(l + 1).getId() == -1) {
-                                    int newSize = disk.get(l).getSize() + disk.get(l + 1).getSize();
-                                    disk.remove(l);
-                                    disk.remove(l);
-                                    disk.add(l, new Block(newSize, -1));
-                                    l--;
-                                    end--;
-                                }
-                            }
-                            */
-
                             diskPlace = disk.size() - 1;
                             break;
                         }
@@ -76,10 +61,7 @@ public class Main {
             }
         }
         System.out.println("");
-
-        // 6288338133779 - Low
-        // 6288599492129
-
+        
         BigInteger count = BigInteger.ZERO;
         int placement = 0;
         for (int i = 0; i < disk.size(); i++) {
